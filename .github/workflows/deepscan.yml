@@ -1,1 +1,31 @@
+name: DeepScan Analysis
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/*'
+      - 'bugfix/*'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deepscan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install DeepScan CLI
+        run: npm install -g deepscan
+
+      - name: Run DeepScan
+        run: deepscan scan ./src --format sarif > deepscan-report.sarif
+
+      - name: Upload SARIF report
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: deepscan-report.sarif
 
