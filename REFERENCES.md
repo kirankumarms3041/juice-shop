@@ -1,6 +1,6 @@
 # References [![Mentioned in Awesome AppSec](https://awesome.re/mentioned-badge.svg)](https://github.com/paragonie/awesome-appsec)
 
-Did you write a blog post, magazine article or do a podcast about or mentioning OWASP Juice Shop? Add it to this file
+Did you write a blog post, magazine article or do a podcast about or mentioning OWASP Juice Shop? Add it to this file1
 and open a PR! The same goes for conference or meetup talks, workshops or trainings you did where this project was
 mentioned or used!
 
